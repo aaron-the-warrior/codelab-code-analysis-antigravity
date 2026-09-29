@@ -1,0 +1,57 @@
+# Workflow de GitHub Actions: revisión de código y seguridad con Antigravity CLI.
+# Copia este archivo a .github/workflows/revision-agy.yml en tu repositorio
+# y crea el secreto GEMINI_API_KEY en Settings > Secrets and variables > Actions.
+name: "🔎 Revisión con Antigravity CLI"
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  revision:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Descargar el código (con historial para el diff)
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Instalar Antigravity CLI
+        run: |
+          curl -fsSL https://antigravity.google/cli/install.sh | bash
+          # El instalador deja el binario agy en el PATH del usuario
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          echo "$HOME/.antigravity/bin" >> "$GITHUB_PATH"
+
+      - name: Configurar proveedor de modelo (API Key de Gemini)
+        run: |
+          mkdir -p ~/.gemini/antigravity-cli
+          echo '{ "modelProvider": "gemini", "model": "Gemini 3.8 Flash (Medium)" }' > ~/.gemini/antigravity-cli/settings.json
+
+      - name: Instalar los plugins de revisión y seguridad
+        run: |
+          git clone --depth 1 https://github.com/gemini-cli-extensions/code-review /tmp/code-review
+          git clone --depth 1 https://github.com/gemini-cli-extensions/security /tmp/security
+          agy plugin install /tmp/code-review
+          agy plugin install /tmp/security
+          agy plugin list
+
+      - name: Ejecutar la revisión en modo headless
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          agy -p "Usa las skills de code-review y security para revisar SOLO los cambios de git diff origin/${BASE_REF}...HEAD. Une los hallazgos en un único reporte en español, sin duplicados, ordenado por severidad, con archivo, línea, categoría OWASP y corrección sugerida. Escribe el resultado en reporte-revision.md" \
+            --dangerously-skip-permissions \
+            --print-timeout 15m
+
+      - name: Publicar el reporte como comentario del PR
+        if: always() && hashFiles('reporte-revision.md') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr comment "${{ github.event.pull_request.number }}" --body-file reporte-revision.md

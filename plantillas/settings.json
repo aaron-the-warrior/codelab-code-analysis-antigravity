@@ -1,0 +1,5 @@
+{
+  "modelProvider": "gemini",
+  "model": "Gemini 3.8 Flash (Medium)",
+  "toolPermission": "request-review"
+}

@@ -1,0 +1,23 @@
+# Entornos virtuales y caché de Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Base de datos SQLite generada al ejecutar la API
+*.db
+
+# Credenciales (nunca subir tokens ni API Keys)
+.env
+gha-creds-*.json
+
+# Configuración local de Antigravity CLI / Gemini CLI
+# (el mcp_config.json lleva tu token de GitHub)
+.agents/mcp_config.json
+.gemini/
+.gemini_security/
+
+# Archivos temporales de sistema y editores
+.DS_Store
+Thumbs.db
+.vscode/

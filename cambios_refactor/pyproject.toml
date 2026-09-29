@@ -1,0 +1,11 @@
+[project]
+name = "inventario-api"
+version = "0.2.0"
+description = "API de gestión de inventario (FastAPI + SQLAlchemy) para el taller de análisis de código con Antigravity CLI"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.120.2",
+    "sqlalchemy>=2.0.44",
+    "requests==2.19.1",
+]
