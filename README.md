@@ -56,11 +56,11 @@ Este repositorio y material didáctico es un proyecto **Powered by [aaronthewarr
   * **Aarón Guerrero**
 
     **Enlaces:**
-    - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="16" height="16" align="center" /> [Google Developer Expert](https://me.developers.google.com/u/108177037637693690075)
-    - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="16" height="16" align="center" /> [aaron-the-warrior](https://github.com/aaron-the-warrior)
-    - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="16" height="16" align="center" /> [aaronthewarrior](https://www.linkedin.com/in/aaronthewarrior/)
-    - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" width="16" height="16" align="center" /> [@aaronthewarrior](https://twitter.com/aaronthewarrior)
-    - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" width="16" height="16" align="center" /> [aaron.guerrero.hernandez](https://www.facebook.com/aaron.guerrero.hernandez)
+    - [![Google Developer Expert](https://img.shields.io/badge/Google-Developer%20Expert-4285F4?style=flat-square&logo=google&logoColor=white)](https://me.developers.google.com/u/108177037637693690075)
+    - [![GitHub](https://img.shields.io/badge/GitHub-aaron--the--warrior-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/aaron-the-warrior)
+    - [![LinkedIn](https://img.shields.io/badge/LinkedIn-aaronthewarrior-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aaronthewarrior/)
+    - [![X](https://img.shields.io/badge/X-@aaronthewarrior-000000?style=flat-square&logo=x&logoColor=white)](https://twitter.com/aaronthewarrior)
+    - [![Facebook](https://img.shields.io/badge/Facebook-aaron.guerrero.hernandez-1877F2?style=flat-square&logo=facebook&logoColor=white)](https://www.facebook.com/aaron.guerrero.hernandez)
 
 * **Codelab Oficial:**
   * *Título:* **Revisión de código y análisis de seguridad con Gemini CLI y extensiones** (*Code Review and Security Analysis with Gemini CLI with Extensions*)
@@ -827,9 +827,9 @@ gh repo create inventario-api-demo --private --source . --push
 
 <p align="center">
   <b>Powered by aaronthewarrior</b> • Construido con ❤️ para la comunidad de desarrolladores<br><br>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="16" height="16" align="center" /> <a href="https://me.developers.google.com/u/108177037637693690075">Google Developer Expert</a> &nbsp;•&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="16" height="16" align="center" /> <a href="https://github.com/aaron-the-warrior">aaron-the-warrior</a> &nbsp;•&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="16" height="16" align="center" /> <a href="https://www.linkedin.com/in/aaronthewarrior/">aaronthewarrior</a> &nbsp;•&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" width="16" height="16" align="center" /> <a href="https://twitter.com/aaronthewarrior">@aaronthewarrior</a> &nbsp;•&nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" width="16" height="16" align="center" /> <a href="https://www.facebook.com/aaron.guerrero.hernandez">Facebook</a>
+  <a href="https://me.developers.google.com/u/108177037637693690075"><img src="https://img.shields.io/badge/Google-Developer%20Expert-4285F4?style=flat-square&logo=google&logoColor=white" alt="Google Developer Expert" /></a>
+  <a href="https://github.com/aaron-the-warrior"><img src="https://img.shields.io/badge/GitHub-aaron--the--warrior-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://www.linkedin.com/in/aaronthewarrior/"><img src="https://img.shields.io/badge/LinkedIn-aaronthewarrior-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://twitter.com/aaronthewarrior"><img src="https://img.shields.io/badge/X-@aaronthewarrior-000000?style=flat-square&logo=x&logoColor=white" alt="X" /></a>
+  <a href="https://www.facebook.com/aaron.guerrero.hernandez"><img src="https://img.shields.io/badge/Facebook-aaron.guerrero.hernandez-1877F2?style=flat-square&logo=facebook&logoColor=white" alt="Facebook" /></a>
 </p>
